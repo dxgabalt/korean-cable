@@ -1,70 +1,148 @@
-# Getting Started with Create React App
+# Propuesta ERP Korean Cable - Software Nicaragua
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📋 Descripción
 
-## Available Scripts
+Propuesta web completa para el sistema ERP de Korean Cable, desarrollada por Software Nicaragua. Incluye módulos especializados para electrificación, obras civiles y administración centralizada.
 
-In the project directory, you can run:
+## 🚀 Características Principales
 
-### `npm start`
+- **Colaboración en tiempo real** entre gerencia, jefes de proyecto, RRHH, compras y logística
+- **Gestión integral de recursos** (mano de obra, subcontratos, materiales, equipos, bodegas)
+- **Seguimiento del progreso** con avance físico y financiero
+- **Análisis de datos** con KPIs por actividad/capítulo/subcapítulo
+- **Generación de informes** diarios, semanales y mensuales
+- **Integración** con MS Project, BIM y sistemas contables
+- **Control de presupuestos** y flujo de caja
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Tecnologías Utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend:** React 18 + TailwindCSS
+- **Navegación:** React Router DOM
+- **Demo Interactiva:** Driver.js
+- **Despliegue:** Netlify
+- **Base de datos propuesta:** Supabase
 
-### `npm test`
+## 💰 Estructura de Costos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Precios por Desarrollo
+- **Frontend (pantallas + Figma):** C$3,500 por pantalla
+- **Backend (endpoints):** C$2,000 por endpoint
+- **Soporte técnico:** C$500/hora o C$1,400/día
+- **Supabase Pro:** $35-50 USD mensual
 
-### `npm run build`
+### Planes Disponibles
+- **Plan Básico:** C$120,000 (12 pantallas, 20 endpoints)
+- **Plan Completo:** C$211,000 (18 pantallas, 30 endpoints) - **RECOMENDADO**
+- **Plan Enterprise:** C$280,000 (25+ pantallas, 40+ endpoints)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🏗️ Estructura del Proyecto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+korean-cable-proposal/
+├── public/
+│   ├── _redirects          # Configuración Netlify
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── Navbar.js       # Navegación principal
+│   │   ├── MobileMenu.js   # Menú móvil
+│   │   ├── Portada.js      # Página de inicio
+│   │   ├── Contenido.js    # Módulos y alcances
+│   │   ├── Beneficios.js   # Beneficios y ROI
+│   │   ├── Costos.js       # Costos e inversión
+│   │   └── Demo.js         # Demo interactiva
+│   ├── utils/
+│   │   └── constants.js    # Datos y configuración
+│   ├── App.js
+│   └── index.js
+├── tailwind.config.js      # Colores Korean Cable
+└── package.json
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎨 Identidad Visual
 
-### `npm run eject`
+- **Colores corporativos:** 
+  - Azul: #225BE4
+  - Rojo: #F9341C
+- **Logo oficial:** [Descargar aquí](https://scontent.fmga3-1.fna.fbcdn.net/v/t39.30808-6/280745411_120748993951524_1444694637903029694_n.jpg)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Instalación y Desarrollo
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerrequisitos
+- Node.js 16+ 
+- npm o yarn
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Comandos
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+# Instalar dependencias
+npm install
 
-## Learn More
+# Ejecutar en desarrollo
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Construir para producción
+npm run build
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Ejecutar tests
+npm test
+```
 
-### Code Splitting
+## 📦 Despliegue en Netlify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Opción 1: Drag & Drop
+1. Ejecutar `npm run build`
+2. Arrastrar carpeta `build/` a [Netlify Drop](https://app.netlify.com/drop)
 
-### Analyzing the Bundle Size
+### Opción 2: Git Integration
+1. Subir código a GitHub/GitLab
+2. Conectar repositorio en Netlify
+3. Configurar:
+   - **Build command:** `npm run build`
+   - **Publish directory:** `build`
+   - **Node version:** 18
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Opción 3: Netlify CLI
+```bash
+# Instalar CLI
+npm install -g netlify-cli
 
-### Making a Progressive Web App
+# Login
+netlify login
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Desplegar
+netlify deploy --prod --dir=build
+```
 
-### Advanced Configuration
+## 🔧 Configuración Netlify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+El archivo `public/_redirects` ya está configurado para SPA:
+```
+/*    /index.html   200
+```
 
-### Deployment
+## 📱 Demo Interactiva
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+La demo incluye:
+- **Tour guiado** con Driver.js
+- **Módulos funcionales:** Dashboard, Proyectos, Inventario, Personal
+- **Datos simulados** representativos de Korean Cable
+- **Interfaz responsive** para móvil y desktop
 
-### `npm run build` fails to minify
+## 🎯 Próximos Pasos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Descargar logo oficial** y reemplazar placeholder
+2. **Personalizar datos** con información real de Korean Cable
+3. **Configurar dominio** personalizado en Netlify
+4. **Integrar analytics** (Google Analytics/Netlify Analytics)
+
+## 📞 Contacto
+
+**Software Nicaragua**
+- Propuesta para: Korean Cable
+- Sistema: ERP Integral
+- Modalidades: Intranet + PWA
+
+## 📄 Licencia
+
+Propuesta comercial - Software Nicaragua © 2024
