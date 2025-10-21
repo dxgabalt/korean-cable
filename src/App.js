@@ -1,27 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Portada from './components/Portada';
-import Contenido from './components/Contenido';
-import Beneficios from './components/Beneficios';
-import Costos from './components/Costos';
-import Demo from './components/Demo';
-import './App.css';
+import { Outlet, Link } from 'react-router-dom';
+import { Navbar } from './components/layout/Navbar';
 
 function App() {
   return (
-    <Router>
-      <div className="App min-h-screen bg-white">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Portada />} />
-          <Route path="/contenido" element={<Contenido />} />
-          <Route path="/beneficios" element={<Beneficios />} />
-          <Route path="/costos" element={<Costos />} />
-          <Route path="/demo" element={<Demo />} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="min-h-screen bg-gray-50">
+      <Navbar />
+      <main className="py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Outlet />
+        </div>
+      </main>
+      
+      <footer className="bg-white border-t border-gray-200 mt-12">
+        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-gray-500 text-sm">
+            &copy; {new Date().getFullYear()} Korean Cable. Todos los derechos reservados.
+          </p>
+        </div>
+      </footer>
+    </div>
   );
 }
 
